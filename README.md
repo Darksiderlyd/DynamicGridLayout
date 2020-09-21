@@ -14,7 +14,7 @@ Demo中没有加载第一个Item，需要到Adapter中修改
         android:orientation="horizontal"
         android:rowCount="6"/>
 ```
-2.实现再记得adapter，设置数据，给DynamicGridLayout设置adapter
+2.实现自己的adapter，设置数据，给DynamicGridLayout设置adapter
 ```
 GridAdapter gridAdapter = new GridAdapter();
 DynamicGridLayout dynamicGridLayout = findViewById(R.id.dgl_layout);
