@@ -40,6 +40,7 @@ public class GridAdapter extends BaseAdapter<EntBean, GridViewHolder> {
 
     @Override
     public void onBindViewHolder(GridViewHolder holder, int position) {
+        //如果第一个要做凸出来的效果可以不加载
         if (position == 0) return;
         super.onBindViewHolder(holder, position);
         ImageView imageView = holder.itemView.findViewById(R.id.iv_panel_img);
