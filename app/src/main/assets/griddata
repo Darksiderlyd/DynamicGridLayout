@@ -1,0 +1,62 @@
+[
+  {
+    "endX": 2,
+    "endY": 1,
+    "imgUrl": "https://img.mobilemart.cn/screen/entertainment/video.png",
+    "page": "evalle://route/launch/entertainment/0/env_video/0",
+    "startX": 0,
+    "startY": 0,
+    "tabId": "106",
+    "text": "看视频"
+  },
+  {
+    "endX": 3,
+    "endY": 2,
+    "imgUrl": "https://img.mobilemart.cn/screen/entertainment/kid.png",
+    "page": "evalle://route/launch/entertainment/0/env_video/3",
+    "startX": 2,
+    "startY": 0,
+    "tabId": "109",
+    "text": "少儿频道"
+  },
+  {
+    "endX": 4,
+    "endY": 1,
+    "imgUrl": "https://img.mobilemart.cn/screen/entertainment/news.png",
+    "page": "evalle://route/launch/entertainment/0/env_video/4",
+    "startX": 3,
+    "startY": 0,
+    "tabId": "110",
+    "text": "新闻资讯"
+  },
+  {
+    "endX": 1,
+    "endY": 2,
+    "imgUrl": "https://img.mobilemart.cn/screen/entertainment/game.png",
+    "page": "evalle://route/launch/entertainment/0/env_video/1",
+    "startX": 0,
+    "startY": 1,
+    "tabId": "107",
+    "text": "玩游戏"
+  },
+  {
+    "endX": 2,
+    "endY": 2,
+    "imgUrl": "https://img.mobilemart.cn/screen/entertainment/music.png",
+    "page": "evalle://route/launch/entertainment/0/env_video/2",
+    "startX": 1,
+    "startY": 1,
+    "tabId": "108",
+    "text": "听音乐"
+  },
+  {
+    "endX": 4,
+    "endY": 2,
+    "imgUrl": "https://img.mobilemart.cn/screen/entertainment/hangout.png",
+    "page": "evalle://route/launch/entertainment/0/env_video/5",
+    "startX": 3,
+    "startY": 1,
+    "tabId": "111",
+    "text": "随便看看"
+  }
+]
