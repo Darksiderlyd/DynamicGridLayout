@@ -21,7 +21,7 @@ GridLayout结合RecyclerView.Adapter实现单页栅格列表的显示
     "startX": 0,
     "startY": 0,
     "tabId": "106",
-    "text": "看视频"
+    "text": "模块0"
   },
   {
     "endX": 3,
@@ -31,7 +31,7 @@ GridLayout结合RecyclerView.Adapter实现单页栅格列表的显示
     "startX": 2,
     "startY": 0,
     "tabId": "109",
-    "text": "少儿频道"
+    "text": "模块1"
   },
   {
     "endX": 4,
@@ -41,7 +41,7 @@ GridLayout结合RecyclerView.Adapter实现单页栅格列表的显示
     "startX": 3,
     "startY": 0,
     "tabId": "110",
-    "text": "新闻资讯"
+    "text": "模块2"
   },
   {
     "endX": 1,
@@ -51,7 +51,7 @@ GridLayout结合RecyclerView.Adapter实现单页栅格列表的显示
     "startX": 0,
     "startY": 1,
     "tabId": "107",
-    "text": "玩游戏"
+    "text": "模块3"
   },
   {
     "endX": 2,
@@ -61,7 +61,7 @@ GridLayout结合RecyclerView.Adapter实现单页栅格列表的显示
     "startX": 1,
     "startY": 1,
     "tabId": "108",
-    "text": "听音乐"
+    "text": "模块4"
   },
   {
     "endX": 4,
@@ -71,7 +71,7 @@ GridLayout结合RecyclerView.Adapter实现单页栅格列表的显示
     "startX": 3,
     "startY": 1,
     "tabId": "111",
-    "text": "随便看看"
+    "text": "模块5"
   }
 ]
 ```
