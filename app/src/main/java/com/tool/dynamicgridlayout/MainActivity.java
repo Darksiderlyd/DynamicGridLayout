@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         GridAdapter gridAdapter = new GridAdapter();
         DynamicGridLayout dynamicGridLayout = findViewById(R.id.dgl_layout);
+        dynamicGridLayout.setColumnCount(4);
+        dynamicGridLayout.setRowCount(2);
         List<EntBean> entBeans = JSON.parseArray(getString(), EntBean.class);
         gridAdapter.setDataList(entBeans);
         dynamicGridLayout.setAdapter(gridAdapter);

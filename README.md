@@ -10,14 +10,79 @@ Demo中没有加载第一个Item，需要到Adapter中修改
         android:id="@+id/dgl_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnCount="6"
-        android:orientation="horizontal"
-        android:rowCount="6"/>
+        android:orientation="horizontal"/>
 ```
-2.实现自己的adapter，设置数据，给DynamicGridLayout设置adapter
+2.将页面行列分为
+```
+[
+  {
+    "endX": 2,
+    "endY": 1,
+    "imgUrl": "",
+    "page": "",
+    "startX": 0,
+    "startY": 0,
+    "tabId": "106",
+    "text": "看视频"
+  },
+  {
+    "endX": 3,
+    "endY": 2,
+    "imgUrl": "",
+    "page": "",
+    "startX": 2,
+    "startY": 0,
+    "tabId": "109",
+    "text": "少儿频道"
+  },
+  {
+    "endX": 4,
+    "endY": 1,
+    "imgUrl": "",
+    "page": "",
+    "startX": 3,
+    "startY": 0,
+    "tabId": "110",
+    "text": "新闻资讯"
+  },
+  {
+    "endX": 1,
+    "endY": 2,
+    "imgUrl": "",
+    "page": "",
+    "startX": 0,
+    "startY": 1,
+    "tabId": "107",
+    "text": "玩游戏"
+  },
+  {
+    "endX": 2,
+    "endY": 2,
+    "imgUrl": "",
+    "page": "",
+    "startX": 1,
+    "startY": 1,
+    "tabId": "108",
+    "text": "听音乐"
+  },
+  {
+    "endX": 4,
+    "endY": 2,
+    "imgUrl": "",
+    "page": "",
+    "startX": 3,
+    "startY": 1,
+    "tabId": "111",
+    "text": "随便看看"
+  }
+]
+```
+3.实现自己的adapter，设置数据，给DynamicGridLayout设置adapter
 ```
 GridAdapter gridAdapter = new GridAdapter();
 DynamicGridLayout dynamicGridLayout = findViewById(R.id.dgl_layout);
+dynamicGridLayout.setColumnCount(4);
+dynamicGridLayout.setRowCount(2);
 List<EntBean> entBeans = JSON.parseArray(getString(), EntBean.class);
 gridAdapter.setDataList(entBeans);
 dynamicGridLayout.setAdapter(gridAdapter);

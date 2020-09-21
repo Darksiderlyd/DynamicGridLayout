@@ -35,6 +35,8 @@ public class DynamicGridLayout<D extends GridData, A extends BaseAdapter<D, Base
 
     public DynamicGridLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        setColumnCount(20);
+        setRowCount(20);
     }
 
     private void loadView() {
