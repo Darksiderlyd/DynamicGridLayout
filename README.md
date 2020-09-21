@@ -88,5 +88,8 @@ gridAdapter.setDataList(entBeans);
 dynamicGridLayout.setAdapter(gridAdapter);
 ```
 
-显示效果:![](https://github.com/Darksiderlyd/DynamicGridLayout/blob/master/screencap/screen.png)
+显示效果:
+![显示效果](https://github.com/Darksiderlyd/DynamicGridLayout/blob/master/screencap/screen.png)
+GridLayout用法理解
+![GridLayout用法](https://blog.csdn.net/wangmx1993328/article/details/82770910)
 
