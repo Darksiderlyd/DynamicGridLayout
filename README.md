@@ -1,8 +1,6 @@
 # DynamicGridLayout
 GridLayout结合RecyclerView.Adapter实现单页栅格列表的显示
 
-Demo中没有加载第一个Item，需要到Adapter中修改
-
 使用：
 1.添加布局
 ```
