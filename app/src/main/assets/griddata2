@@ -1,0 +1,52 @@
+[
+  {
+    "endX": 1,
+    "endY": 5,
+    "imgUrl": "",
+    "page": "",
+    "startX": 0,
+    "startY": 0,
+    "tabId": "106",
+    "text": "模块0"
+  },
+  {
+    "endX": 2,
+    "endY": 3,
+    "imgUrl": "",
+    "page": "",
+    "startX": 1,
+    "startY": 0,
+    "tabId": "109",
+    "text": "模块1"
+  },
+  {
+    "endX": 3,
+    "endY": 3,
+    "imgUrl": "",
+    "page": "",
+    "startX": 2,
+    "startY": 0,
+    "tabId": "110",
+    "text": "模块2"
+  },
+  {
+    "endX": 4,
+    "endY": 5,
+    "imgUrl": "",
+    "page": "",
+    "startX": 3,
+    "startY": 0,
+    "tabId": "107",
+    "text": "模块3"
+  },
+  {
+    "endX": 3,
+    "endY": 5,
+    "imgUrl": "",
+    "page": "",
+    "startX": 1,
+    "startY": 3,
+    "tabId": "108",
+    "text": "模块4"
+  }
+]

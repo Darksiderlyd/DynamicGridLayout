@@ -25,7 +25,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:text="1111"
-        android:textSize="16sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/tv_panel_text2"
@@ -36,7 +36,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:text="1111"
-        android:textSize="16sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/tv_panel_text"
@@ -46,7 +46,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:text="1111"
         android:layout_marginBottom="10dp" />
 

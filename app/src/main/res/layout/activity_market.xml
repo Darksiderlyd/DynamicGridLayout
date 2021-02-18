@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MarketActivity">
+
+    <ImageView
+        android:id="@+id/iv_market"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_market_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tool.dynamicgridlayout.widget.mark.DynamicMarkLayout
+        android:id="@+id/dml_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_market"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_market"
+        app:layout_constraintRight_toRightOf="@+id/iv_market"
+        app:layout_constraintTop_toTopOf="@+id/iv_market" />
+
+    <Button
+        android:id="@+id/btn_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="切换选中"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dml_layout" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@android:color/holo_blue_dark"
+        app:layout_constraintTop_toBottomOf="@+id/btn_change" />
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@+id/v1">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.tool.dynamicgridlayout.widget.multigrid.MultiDynamicGridLayout
+                android:id="@+id/dgl_layout"
+                android:layout_width="492dp"
+                android:layout_height="162dp"
+                android:layout_margin="4dp"
+                android:orientation="horizontal"
+                app:mdgl_space="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </FrameLayout>
+    </HorizontalScrollView>
+
+
+    <View
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@android:color/holo_blue_dark"
+        app:layout_constraintTop_toBottomOf="@+id/hsv_grid" />
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_grid2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@+id/v2">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.tool.dynamicgridlayout.widget.mygrid.DynamicGridLayout
+                android:id="@+id/dgl_layout2"
+                android:layout_width="500dp"
+                android:layout_height="200dp"
+                android:orientation="horizontal"
+                app:mdgl_space="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </FrameLayout>
+    </HorizontalScrollView>
+
+
+    <View
+        android:id="@+id/v3"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@android:color/holo_blue_dark"
+        app:layout_constraintTop_toBottomOf="@+id/hsv_grid2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,8 @@
-package com.tool.dynamicgridlayout;
+package com.tool.dynamicgridlayout.mygriduse;
 
 import android.view.ViewGroup;
 
-import com.tool.dynamicgridlayout.mygrid.BaseViewHolder;
+import com.tool.dynamicgridlayout.base.BaseViewHolder;
 
 public class GridViewHolder extends BaseViewHolder<EntBean> {
 

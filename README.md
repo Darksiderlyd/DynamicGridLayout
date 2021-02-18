@@ -4,7 +4,7 @@ GridLayout结合RecyclerView.Adapter实现单页栅格列表的显示
 使用：
 1.添加布局
 ```
-<com.tool.dynamicgridlayout.mygrid.DynamicGridLayout
+<com.tool.dynamicgridlayout.widget.mygrid.DynamicGridLayout
         android:id="@+id/dgl_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

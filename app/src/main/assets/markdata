@@ -1,0 +1,61 @@
+[
+  {
+    "imgUrl": "",
+    "text": "美国",
+    "left": 0,
+    "top": 0,
+    "leftScale": 0.133,
+    "topScale": 0.265
+  },
+  {
+     "imgUrl": "",
+     "text": "欧洲",
+     "left": 0,
+     "top": 0,
+     "leftScale": 0.339,
+     "topScale": 0.228,
+  },
+  {
+     "imgUrl": "",
+     "text": "德国",
+     "left": 0,
+     "top": 0,
+     "leftScale": 0.427,
+     "topScale": 0.344
+  },
+  {
+    "imgUrl": "",
+    "text": "新加坡",
+    "left": 0,
+    "top": 0,
+    "flagTop": true,
+    "leftScale": 0.653,
+    "topScale": 0.571
+  },
+  {
+    "imgUrl": "",
+    "text": "中国",
+    "left": 0,
+    "top": 0,
+    "flagTop": true,
+    "leftScale": 0.747,
+    "topScale": 0.249
+  },
+  {
+    "imgUrl": "",
+    "text": "香港",
+    "left": 0,
+    "top": 0,
+    "leftScale": 0.773,
+    "topScale": 0.444
+  },
+  {
+    "imgUrl": "",
+    "text": "日本",
+    "left": 0,
+    "top": 0,
+    "flagTop": true,
+    "leftScale": 0.859,
+    "topScale": 0.318
+  }
+]

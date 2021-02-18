@@ -1,4 +1,4 @@
-package com.tool.dynamicgridlayout.mygrid;
+package com.tool.dynamicgridlayout.base;
 
 /**
  * @package com.mgo.uikitimpl.view.mygrid
@@ -6,7 +6,7 @@ package com.tool.dynamicgridlayout.mygrid;
  * @date 2020/8/19
  * @email 1126220529@qq.com
  */
-public class GridData {
+public class BaseGridData {
     private String imgUrl;
     private String text;
     private String page;

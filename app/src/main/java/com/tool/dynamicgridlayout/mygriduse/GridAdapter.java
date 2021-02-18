@@ -1,4 +1,4 @@
-package com.tool.dynamicgridlayout;
+package com.tool.dynamicgridlayout.mygriduse;
 
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -7,7 +7,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.tool.dynamicgridlayout.mygrid.BaseAdapter;
+import com.tool.dynamicgridlayout.R;
+import com.tool.dynamicgridlayout.base.BaseAdapter;
 
 import java.util.List;
 

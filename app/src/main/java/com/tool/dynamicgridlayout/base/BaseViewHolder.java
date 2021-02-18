@@ -1,4 +1,4 @@
-package com.tool.dynamicgridlayout.mygrid;
+package com.tool.dynamicgridlayout.base;
 
 import android.content.Context;
 import android.view.LayoutInflater;
