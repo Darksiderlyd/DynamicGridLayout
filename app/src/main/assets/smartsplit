@@ -1,0 +1,122 @@
+[
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 40.0,
+    "text": "模块0"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 38.0,
+    "text": "模块x"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 35.0,
+    "text": "模块1"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 30.0,
+    "text": "模块2"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 28.0,
+    "text": "模块xx"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 26.0,
+    "text": "模块xxx"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 25.0,
+    "text": "模块3"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 20.0,
+    "text": "模块4"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 18.0,
+    "text": "模块y"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 17.0,
+    "text": "模块yy"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 15.0,
+    "text": "模块5"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 12.0,
+    "text": "模块xxxx"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 10.0,
+    "text": "模块6"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio":7.0,
+    "text": "模块xxxxx"
+  },
+  {
+    "endX": 0,
+    "endY": 0,
+    "startX": 0,
+    "startY": 0,
+    "ratio": 1.0,
+    "text": "模块7"
+  }
+]

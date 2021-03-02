@@ -15,11 +15,13 @@ import com.tool.dynamicgridlayout.markuse.MarkAdapter;
 import com.tool.dynamicgridlayout.markuse.MarkBean;
 import com.tool.dynamicgridlayout.mygriduse.EntBean;
 import com.tool.dynamicgridlayout.mygriduse.GridAdapter;
+import com.tool.dynamicgridlayout.utils.DimenUtils;
 import com.tool.dynamicgridlayout.utils.StringUtils;
 import com.tool.dynamicgridlayout.widget.mark.DynamicMarkLayout;
 import com.tool.dynamicgridlayout.widget.mark.MyItemClickListener;
 import com.tool.dynamicgridlayout.widget.multigrid.MultiDynamicGridLayout;
 import com.tool.dynamicgridlayout.widget.mygrid.DynamicGridLayout;
+import com.tool.dynamicgridlayout.widget.split.SmartSplitGridLayout;
 
 import java.util.List;
 
@@ -62,30 +64,42 @@ public class MarketActivity extends AppCompatActivity {
                 Toast.makeText(MarketActivity.this, "第一次" + markBeans.get(position).getText(), Toast.LENGTH_SHORT).show();
             }
         });
+
+        final GridAdapter multiGridAdapter = new GridAdapter();
+        final SmartSplitGridLayout multiDynamicGridLayout = findViewById(R.id.dgl_layout);
+        final View view = findViewById(R.id.fl_smart);
+
+        onlyViewMeasureLayout(view, View.MeasureSpec.EXACTLY, View.MeasureSpec.UNSPECIFIED);
+
+        Log.d("DynamicGridLayout", "Width: " + multiDynamicGridLayout.getWidth() + " Height: " + multiDynamicGridLayout.getHeight());
+
+        List<EntBean> entBeans1 = JSON.parseArray(StringUtils.getString(getApplicationContext(), "smartsplit"), EntBean.class);
+        multiGridAdapter.setDataList(entBeans1);
+        multiDynamicGridLayout.setAdapter(multiGridAdapter);
+
         findViewById(R.id.btn_change).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int v = (int) (Math.random() * (markBeans.size() - 1));
                 markAdapter.selectItem(v);
+                multiDynamicGridLayout.loadData();
             }
         });
 
-
-
-        GridAdapter multiGridAdapter = new GridAdapter();
-        MultiDynamicGridLayout multiDynamicGridLayout = findViewById(R.id.dgl_layout);
-        multiDynamicGridLayout.setColumnCount(4);
-        multiDynamicGridLayout.setRowCount(5);
-        List<EntBean> entBeans1 = JSON.parseArray(StringUtils.getString(getApplicationContext(),"griddata2"), EntBean.class);
-        multiGridAdapter.setDataList(entBeans1);
-        multiDynamicGridLayout.setAdapter(multiGridAdapter);
+//        GridAdapter multiGridAdapter = new GridAdapter();
+//        MultiDynamicGridLayout multiDynamicGridLayout = findViewById(R.id.dgl_layout);
+//        multiDynamicGridLayout.setColumnCount(4);
+//        multiDynamicGridLayout.setRowCount(5);
+//        List<EntBean> entBeans1 = JSON.parseArray(StringUtils.getString(getApplicationContext(),"griddata2"), EntBean.class);
+//        multiGridAdapter.setDataList(entBeans1);
+//        multiDynamicGridLayout.setAdapter(multiGridAdapter);
 
 
         GridAdapter gridAdapter = new GridAdapter();
         DynamicGridLayout dynamicGridLayout = findViewById(R.id.dgl_layout2);
         dynamicGridLayout.setColumnCount(4);
         dynamicGridLayout.setRowCount(2);
-        List<EntBean> entBeans2 = JSON.parseArray(StringUtils.getString(getApplicationContext(),"griddata"), EntBean.class);
+        List<EntBean> entBeans2 = JSON.parseArray(StringUtils.getString(getApplicationContext(), "griddata"), EntBean.class);
         gridAdapter.setDataList(entBeans2);
         dynamicGridLayout.setAdapter(gridAdapter);
 

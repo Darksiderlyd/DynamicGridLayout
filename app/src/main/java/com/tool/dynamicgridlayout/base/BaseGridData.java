@@ -15,6 +15,33 @@ public class BaseGridData {
     private int startY;
     private int endX;
     private int endY;
+    private float ratio;
+    private float width;
+    private float height;
+
+    public float getHeight() {
+        return height;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
+    public float getWidth() {
+        return width;
+    }
+
+    public void setWidth(float width) {
+        this.width = width;
+    }
+
+    public float getRatio() {
+        return ratio;
+    }
+
+    public void setRatio(float ratio) {
+        this.ratio = ratio;
+    }
 
     public String getImgUrl() {
         return imgUrl;

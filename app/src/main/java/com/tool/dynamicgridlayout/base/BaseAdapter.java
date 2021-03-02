@@ -41,6 +41,10 @@ public abstract class BaseAdapter<M, H extends BaseViewHolder<M>> extends Recycl
         }
     }
 
+    public List<M> getDataList() {
+        return dataList;
+    }
+
     /**
      * 设置点击监听,并设置点击回调接口
      *
