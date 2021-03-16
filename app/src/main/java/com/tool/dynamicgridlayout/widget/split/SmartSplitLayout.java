@@ -12,7 +12,7 @@ import com.tool.dynamicgridlayout.base.BaseViewHolder;
 import java.util.Collections;
 import java.util.List;
 
-//完美实现需要替换Adapter 和 数据
+////完美实现需要替换Adapter 和 数据
 //public class SmartSplitLayout extends FrameLayout {
 //
 //    private double BORDER = 0.4f;
@@ -189,23 +189,47 @@ import java.util.List;
 //        int i = index;
 //        double usedRatio = 0;
 //
+//        //优化显示矩形接近正方形第一版
+////        double preSumRatio = 0;
+////        int num = 0;
+////        for (int k = 0; k < ratios.size(); k++) {
+////            if (preSumRatio / sumRatio > BORDER) {
+////                num = k;
+////                break;
+////            } else {
+////                preSumRatio += mAdapter.getItem(k).getRatio();
+////            }
+////        }
+////
+////        preSumRatio = 0;
+////
+////        if (num > 3) {
+////            for (int k = 0; k < 3; k++) {
+////                preSumRatio += mAdapter.getItem(k).getRatio();
+////                BORDER = preSumRatio / sumRatio - 0.01;
+////            }
+////        }
+//
+//        //优化显示矩形接近正方形第二版 动态阈值计算
 //        double preSumRatio = 0;
-//        int num = 0;
-//        for (int k = 0; k < ratios.size(); k++) {
-//            if (preSumRatio / sumRatio > BORDER) {
-//                num = k;
-//                break;
-//            } else {
-//                preSumRatio += mAdapter.getItem(k).getRatio();
-//            }
-//        }
-//
-//        preSumRatio = 0;
-//
-//        if (num > 3) {
-//            for (int k = 0; k < 3; k++) {
-//                preSumRatio += mAdapter.getItem(k).getRatio();
-//                BORDER = preSumRatio / sumRatio - 0.01;
+//        int j = index;
+//        int k = j;
+//        Log.d(TAG, "重新计算SumRatio: " + sumRatio);
+//        if (ratios.size() - index > 3) {
+//            while (j < ratios.size()) {
+//                preSumRatio = preSumRatio + ratios.get(j).getRatio();
+//                double usedArea = preSumRatio / sumRatio * area;
+//                double valueHeight = usedArea / minSide;//计算出高度
+//                double valueWidth = ratios.get(k).getRatio() / preSumRatio * minSide; //计算占比 然后计算宽度minside占比
+//                double rectRatio = valueHeight / valueWidth;
+//                Log.d(TAG, "重新计算: usedArea: " + usedArea + " valueHeight: " + valueHeight + " valueWidth: " + valueWidth + " rectRatio: " + rectRatio);
+//                if (rectRatio >= 0.7 && rectRatio <= 1.4) {
+//                    BORDER = preSumRatio / sumRatio - 0.01;
+//                    Log.d(TAG, "重新计算Ratio: " + BORDER);
+//                    break;
+//                } else {
+//                    j++;
+//                }
 //            }
 //        }
 //
