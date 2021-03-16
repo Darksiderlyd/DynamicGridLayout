@@ -10,13 +10,18 @@ import android.widget.FrameLayout;
 import com.tool.dynamicgridlayout.base.BaseViewHolder;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 ////完美实现需要替换Adapter 和 数据
 //public class SmartSplitLayout extends FrameLayout {
 //
 //    private double BORDER = 0.4f;
-//    private static int WRAP_NUM = 3;
+//    private static final double WH_LOWER = 0.7;
+//    private static final double WH_UPPER = 1.4;
+//    private static final double RESULT_SCALE = 0.99;
+//
 //    public static final int H = 0;
 //    public static final int V = 1;
 //    private static final String TAG = "XSmartSplitLayout";
@@ -182,6 +187,8 @@ import java.util.List;
 //        return params;
 //    }
 //
+//    Map<Double, Double> map = new HashMap<>();
+//
 //    private void Dynamic(double width, double height, int index, double area, double sumRatio, List<GlobalIndustryData> ratios) {
 //        Log.d("DynamicLayout", "width: " + width + ", " + "height: " + height + ", " + "index: " + index + ", " + "area: " + area + ", " + "sumRatio: " + sumRatio + ", ");
 //        double minSide = Math.min(width, height);
@@ -215,21 +222,59 @@ import java.util.List;
 //        int j = index;
 //        int k = j;
 //        Log.d(TAG, "重新计算SumRatio: " + sumRatio);
-//        if (ratios.size() - index > 3) {
+//        double firstOutUpperRatio = 0.0;
+//        double lastOutLowerRatio = 0.0;
+//        map.clear();
+//        if (ratios.size() - index >= 3) {
 //            while (j < ratios.size()) {
 //                preSumRatio = preSumRatio + ratios.get(j).getRatio();
 //                double usedArea = preSumRatio / sumRatio * area;
 //                double valueHeight = usedArea / minSide;//计算出高度
-//                double valueWidth = ratios.get(k).getRatio() / preSumRatio * minSide; //计算占比 然后计算宽度minside占比
+//                double valueWidth = ratios.get(k).getRatio() / preSumRatio * minSide; //计算占比 然后计算第一个宽度
 //                double rectRatio = valueHeight / valueWidth;
 //                Log.d(TAG, "重新计算: usedArea: " + usedArea + " valueHeight: " + valueHeight + " valueWidth: " + valueWidth + " rectRatio: " + rectRatio);
-//                if (rectRatio >= 0.7 && rectRatio <= 1.4) {
-//                    BORDER = preSumRatio / sumRatio - 0.01;
-//                    Log.d(TAG, "重新计算Ratio: " + BORDER);
+//
+//                map.put(rectRatio, preSumRatio);
+//
+//                if (rectRatio >= WH_LOWER && rectRatio <= WH_UPPER) {
+//                    BORDER = preSumRatio / sumRatio * RESULT_SCALE;
+//                    Log.d(TAG, "重新计算BORDER: " + BORDER);
 //                    break;
-//                } else {
-//                    j++;
+//                } else if (rectRatio > WH_UPPER) {
+//                    if (firstOutUpperRatio == 0.0) {
+//                        firstOutUpperRatio = rectRatio;
+//                    }
+//                } else if (rectRatio < WH_LOWER) {
+//                    if (rectRatio > lastOutLowerRatio) {
+//                        lastOutLowerRatio = rectRatio;
+//                    }
 //                }
+//
+//                //利用 rectRatio 一定是递增的
+//                if (firstOutUpperRatio != 0) {
+//                    Double aDouble;
+//                    if (lastOutLowerRatio != 0) {
+//                        if (Math.abs(lastOutLowerRatio - WH_LOWER) < Math.abs(firstOutUpperRatio - WH_UPPER)) {
+//                            aDouble = map.get(firstOutUpperRatio);
+//                        } else {
+//                            aDouble = map.get(lastOutLowerRatio);
+//                        }
+//                    } else {
+//                        aDouble = map.get(firstOutUpperRatio);
+//                    }
+//                    if (aDouble != null) {
+//                        BORDER = aDouble / sumRatio * RESULT_SCALE;
+//                    }
+//                    Log.d(TAG, "重新计算BORDER 没有命中的情况下: " + BORDER);
+//                    break;
+//                }
+//
+//                j++;
+//            }
+//        } else {
+//            for (; j < ratios.size(); j++) {
+//                preSumRatio += ratios.get(j).getRatio();
+//                BORDER = ratios.get(k).getRatio() / preSumRatio * RESULT_SCALE;
 //            }
 //        }
 //
